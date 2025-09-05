@@ -1,0 +1,14 @@
+export { default as منصة_وحيدة } from "./home";
+export { default as LoginPage } from "./login";
+export { default as قوة_البدايات } from "./قوة_البدايات/قوة_البدايات";
+export { default as ومضات_في_حل_المشكلات } from "./ومضات_في_حل_المشكلات/ومضات_في_حل_المشكلات";
+export { default as المعلم_المبدع_الصغير } from "./المعلم_المبدع_الصغير/المعلم_المبدع_الصغير";
+export { default as خوارزميات_المحرق } from "./خوارزميات_المحرق/خوارزميات_المحرق";
+export { default as منصة_اسأل_سؤال } from "./منصة_اسأل_سؤال/منصة_اسأل_سؤال";
+export { default as نادي_التدريب } from "./نادي_التدريب/نادي_التدريب";
+export { default as دانات_الرياضيات } from "./دانات_الرياضيات/دانات_الرياضيات";
+export { default as كنوز_الرياضيات } from "./كنوز_الرياضيات/كنوز_الرياضيات";
+export { default as تكنوماث } from "./تكنوماث/تكنوماث";
+export { default as SectionListPage } from "./SectionListPage";
+export { default as ResourceListPage } from "./ResourceListPage";
+export { default as AdminQuestionManagementPage } from "./AdminQuestionManagementPage";
