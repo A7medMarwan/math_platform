@@ -32,18 +32,11 @@ export default function AppRoutes() {
   return (
     <Routes>
       <Route path="/login" element={<LoginPage />} />
-      <Route
-        path="/"
-        element={
-          <ProtectedRoute>
-            <HomePage />
-          </ProtectedRoute>
-        }
-      />
+      <Route path="/" element={<HomePage />} />
       <Route
         path="/admin"
         element={
-          <ProtectedRoute>
+          <ProtectedRoute requiredRole="admin">
             <HomePage />
           </ProtectedRoute>
         }
@@ -51,7 +44,7 @@ export default function AppRoutes() {
       <Route
         path="/admin/questions"
         element={
-          <ProtectedRoute>
+          <ProtectedRoute requiredRole="admin">
             <AdminQuestionManagementPage />
           </ProtectedRoute>
         }
@@ -72,101 +65,26 @@ export default function AppRoutes() {
           </ProtectedRoute>
         }
       />
-      <Route
-        path="/قوة-البدايات"
-        element={
-          <ProtectedRoute>
-            <BeginningsPage />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/ومضات-في-حل-المشكلات"
-        element={
-          <ProtectedRoute>
-            <WomdatProblemSolving />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/ومضات-في-حل-المشكلات/:slug"
-        element={
-          <ProtectedRoute>
-            <ومضات_تفاصيل />
-          </ProtectedRoute>
-        }
-      />
+      <Route path="/قوة-البدايات" element={<BeginningsPage />} />
+      <Route path="/ومضات-في-حل-المشكلات" element={<WomdatProblemSolving />} />
+      <Route path="/ومضات-في-حل-المشكلات/:slug" element={<ومضات_تفاصيل />} />
       <Route
         path="/المعلم-المبدع-الصغير"
-        element={
-          <ProtectedRoute>
-            <YoungCreativeTeacherPage />
-          </ProtectedRoute>
-        }
+        element={<YoungCreativeTeacherPage />}
       />
-      <Route
-        path="/خوارزميات-المحرق"
-        element={
-          <ProtectedRoute>
-            <AlgorithmsPage />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/منصة-اسأل-سؤال"
-        element={
-          <ProtectedRoute>
-            <AskQuestionPage />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/نادي-التدريب"
-        element={
-          <ProtectedRoute>
-            <TrainingClubPage />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/دانات-الرياضيات"
-        element={
-          <ProtectedRoute>
-            <MathPearlsPage />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/كنوز-الرياضيات"
-        element={
-          <ProtectedRoute>
-            <MathTreasuresPage />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/تكنوماث"
-        element={
-          <ProtectedRoute>
-            <TechnoMathPage />
-          </ProtectedRoute>
-        }
-      />
+      <Route path="/خوارزميات-المحرق" element={<AlgorithmsPage />} />
+      <Route path="/منصة-اسأل-سؤال" element={<AskQuestionPage />} />
+      <Route path="/نادي-التدريب" element={<TrainingClubPage />} />
+      <Route path="/دانات-الرياضيات" element={<MathPearlsPage />} />
+      <Route path="/كنوز-الرياضيات" element={<MathTreasuresPage />} />
+      <Route path="/تكنوماث" element={<TechnoMathPage />} />
       <Route
         path="/platform/:projectId/sections"
-        element={
-          <ProtectedRoute>
-            <SectionListPage />
-          </ProtectedRoute>
-        }
+        element={<SectionListPage />}
       />
       <Route
         path="/platform/:projectId/sections/:sectionId/resources"
-        element={
-          <ProtectedRoute>
-            <ResourceListPage />
-          </ProtectedRoute>
-        }
+        element={<ResourceListPage />}
       />
     </Routes>
   );

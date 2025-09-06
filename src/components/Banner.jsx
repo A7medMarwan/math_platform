@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../features/auth/authSlice";
 import ministryLogo from "../Assets/Images/ministry.png";
 import schoolLogo from "../Assets/Images/school-name.jpg";
@@ -7,9 +7,14 @@ import schoolLogo from "../Assets/Images/school-name.jpg";
 export default function Banner() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const { isAuthenticated } = useSelector((state) => state.auth);
 
   const handleLogout = async () => {
     await dispatch(logoutUser());
+    navigate("/");
+  };
+
+  const handleLogin = () => {
     navigate("/login");
   };
 
@@ -42,9 +47,15 @@ export default function Banner() {
               }}
             />
           )}
-          <button className="btn btn-outline-light" onClick={handleLogout}>
-            تسجيل الخروج
-          </button>
+          {isAuthenticated ? (
+            <button className="btn btn-outline-light" onClick={handleLogout}>
+              تسجيل الخروج
+            </button>
+          ) : (
+            <button className="btn btn-outline-light" onClick={handleLogin}>
+              تسجيل الدخول
+            </button>
+          )}
         </div>
       </div>
     </div>
