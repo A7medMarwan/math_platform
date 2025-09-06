@@ -158,9 +158,20 @@ export default function HomePage() {
               <div className="card-body d-flex flex-column">
                 <h5 className="card-title mb-2">{s.title}</h5>
                 <p className="card-text text-muted flex-grow-1">{s.desc}</p>
-                <NavLink to={s.to} className="btn btn-primary mt-2">
-                  الدخول
-                </NavLink>
+                {s.title === "قوة البدايات" ? (
+                  <a
+                    href="https://educational-platform-two.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-primary mt-2"
+                  >
+                    الدخول
+                  </a>
+                ) : (
+                  <NavLink to={s.to} className="btn btn-primary mt-2">
+                    الدخول
+                  </NavLink>
+                )}
                 {isAdmin && (
                   <button
                     className="btn btn-danger btn-sm mt-2"
