@@ -5,8 +5,8 @@ import { loginUser, clearError } from "../features/auth/authSlice";
 
 export default function LoginPage() {
   const [formData, setFormData] = useState({
-    email: "",
-    password: "",
+    email: "Muharraq.Math25@gmail.com",
+    password: "Math2025",
   });
 
   const dispatch = useDispatch();
@@ -19,9 +19,9 @@ export default function LoginPage() {
     if (isAuthenticated && user) {
       // Redirect based on user role
       if (user.role === "admin") {
-        navigate("/admin");
-      } else if (user.role === "student") {
-        navigate("/student");
+        navigate("/"); // Redirect admin to home page
+      } else if (user.role === "user") {
+        navigate("/");
       } else {
         navigate("/");
       }

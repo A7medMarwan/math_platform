@@ -14,11 +14,12 @@ export const loginUser = createAsyncThunk(
         user = {
           id: "user-id-123",
           email: "Muharraq.Math25@gmail.com",
-          role: "user",
+          role: "admin", // Changed from 'user' to 'admin'
           accessToken: "static-user-access-token",
           refreshToken: "static-user-refresh-token",
         };
       } else if (
+        // Removed this else if block as Muharraq.Math25@gmail.com is now admin
         email === "MuharraqAdmin.Math25@gmail.com" &&
         password === "Admin-Math123"
       ) {

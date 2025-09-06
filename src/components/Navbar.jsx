@@ -12,17 +12,17 @@ export default function Navbar() {
     navigate("/login");
   };
 
-  if (!isAuthenticated) {
-    return null;
-  }
-
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
       <div className="container-fluid">
-        {isAuthenticated && (
+        {isAuthenticated ? (
           <button className="btn btn-outline-light me-3" onClick={handleLogout}>
             تسجيل الخروج
           </button>
+        ) : (
+          <Link className="btn btn-outline-light me-3" to="/login">
+            تسجيل الدخول
+          </Link>
         )}
 
         <Link className="navbar-brand text-white mx-auto" to="/">

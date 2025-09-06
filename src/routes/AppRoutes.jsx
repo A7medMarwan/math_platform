@@ -16,7 +16,6 @@ import {
   تكنوماث as TechnoMathPage,
   SectionListPage, // Import the new SectionListPage
   ResourceListPage, // Import the new ResourceListPage
-  AdminQuestionManagementPage, // Import new admin question page
 } from "../pages";
 import WomdatProblemSolving from "../pages/ومضات_في_حل_المشكلات/ومضات_في_حل_المشكلات";
 import ومضات_تفاصيل from "../pages/ومضات_في_حل_المشكلات/تفاصيل";
@@ -33,38 +32,6 @@ export default function AppRoutes() {
     <Routes>
       <Route path="/login" element={<LoginPage />} />
       <Route path="/" element={<HomePage />} />
-      <Route
-        path="/admin"
-        element={
-          <ProtectedRoute requiredRole="admin">
-            <HomePage />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/admin/questions"
-        element={
-          <ProtectedRoute requiredRole="admin">
-            <AdminQuestionManagementPage />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/student"
-        element={
-          <ProtectedRoute>
-            <Navigate to="/" replace />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/profile"
-        element={
-          <ProtectedRoute>
-            <Navigate to="/" replace />
-          </ProtectedRoute>
-        }
-      />
       <Route path="/قوة-البدايات" element={<BeginningsPage />} />
       <Route path="/ومضات-في-حل-المشكلات" element={<WomdatProblemSolving />} />
       <Route path="/ومضات-في-حل-المشكلات/:slug" element={<ومضات_تفاصيل />} />
