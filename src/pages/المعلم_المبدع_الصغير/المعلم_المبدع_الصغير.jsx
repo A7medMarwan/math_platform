@@ -8,16 +8,16 @@ export default function AlmoallemAlmobdeAlsagheer() {
     <div className="container">
       <div className="pt-5 text-center almoallem-alsagheer-header">
         <h1>المعلم المبدع الصغير</h1>
-        <div className="almoallem-alsagheer-button-group">
+        <div className="almoallem-alsagheer-button-group d-flex flex-column flex-md-row justify-content-center align-items-center">
           <button
             onClick={() => navigate("/")}
-            className="btn btn-outline-primary mb-4 mt-3"
+            className="btn btn-outline-primary mb-2 mb-md-0 me-md-3"
           >
             العودة للمشاريع
           </button>
           <button
             onClick={() => navigate("/مكتبة_المعلم_المبدع")}
-            className="btn btn-primary mb-4 mt-3"
+            className="btn btn-primary mb-2"
           >
             مكتبة المعلم المبدع
           </button>
