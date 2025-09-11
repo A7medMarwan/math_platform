@@ -1,0 +1,148 @@
+.carousel-container {
+  padding: 20px 0;
+}
+
+.carousel-item-wrapper {
+  padding: 10px;
+}
+
+.carousel-item-content {
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+  height: 200px; /* Fixed height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.carousel-item-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-lesson-name {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: var(--primary);
+  margin-bottom: 5px;
+}
+
+.carousel-math-column {
+  font-size: 1.1em;
+  font-style: italic;
+  color: var(--primary); /* Changed to primary color */
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.carousel-exam-national {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: var(--primary-dark);
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.carousel-student-name {
+  font-size: 1em;
+  color: var(--text);
+  margin-top: 5px;
+}
+
+.carousel-school-name {
+  font-size: 0.9em;
+  color: var(--text);
+  margin-top: 2px;
+}
+
+/* Slick Carousel Overrides */
+.slick-prev,
+.slick-next {
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 30px;
+  color: var(--primary);
+}
+
+.slick-prev {
+  left: -25px;
+}
+
+.slick-next {
+  right: -25px;
+}
+
+.slick-dots li button:before {
+  font-size: 10px;
+  color: var(--primary) !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: var(--primary-dark) !important;
+}
+
+.subject-selection-dropdown {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.subject-selection-dropdown h3 {
+  color: var(--primary-dark);
+  margin-bottom: 15px;
+}
+
+.subject-selection-dropdown .btn {
+  margin: 5px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.modal-content h3 {
+  color: var(--primary-dark);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.modal-content .form-label {
+  font-weight: bold;
+  color: var(--text);
+}
+
+.modal-content .btn {
+  margin-top: 15px;
+}

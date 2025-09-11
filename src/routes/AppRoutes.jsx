@@ -7,7 +7,7 @@ import {
   منصة_وحيدة as HomePage,
   LoginPage,
   قوة_البدايات as BeginningsPage,
-  المعلم_المبدع_الصغير as YoungCreativeTeacherPage,
+  AlmoallemAlmobdeAlsagheer as YoungCreativeTeacherPage,
   خوارزميات_المحرق as AlgorithmsPage,
   منصة_اسأل_سؤال as AskQuestionPage,
   نادي_التدريب as TrainingClubPage,
@@ -16,6 +16,7 @@ import {
   تكنوماث as TechnoMathPage,
   SectionListPage, // Import the new SectionListPage
   ResourceListPage, // Import the new ResourceListPage
+  MaktabatAlmoallemAlmobde as CreativeTeacherLibraryPage,
 } from "../pages";
 import WomdatProblemSolving from "../pages/ومضات_في_حل_المشكلات/ومضات_في_حل_المشكلات";
 import ومضات_تفاصيل from "../pages/ومضات_في_حل_المشكلات/تفاصيل";
@@ -35,16 +36,15 @@ export default function AppRoutes() {
       <Route path="/قوة-البدايات" element={<BeginningsPage />} />
       <Route path="/ومضات-في-حل-المشكلات" element={<WomdatProblemSolving />} />
       <Route path="/ومضات-في-حل-المشكلات/:slug" element={<ومضات_تفاصيل />} />
-      <Route
-        path="/المعلم-المبدع-الصغير"
-        element={<YoungCreativeTeacherPage />}
-      />
-      <Route path="/خوارزميات-المحرق" element={<AlgorithmsPage />} />
       <Route path="/منصة-اسأل-سؤال" element={<AskQuestionPage />} />
       <Route path="/نادي-التدريب" element={<TrainingClubPage />} />
       <Route path="/دانات-الرياضيات" element={<MathPearlsPage />} />
       <Route path="/كنوز-الرياضيات" element={<MathTreasuresPage />} />
       <Route path="/تكنوماث" element={<TechnoMathPage />} />
+      <Route
+        path="/platform/3/sections"
+        element={<YoungCreativeTeacherPage />}
+      />
       <Route
         path="/platform/:projectId/sections"
         element={<SectionListPage />}
@@ -52,6 +52,10 @@ export default function AppRoutes() {
       <Route
         path="/platform/:projectId/sections/:sectionId/resources"
         element={<ResourceListPage />}
+      />
+      <Route
+        path="/مكتبة_المعلم_المبدع"
+        element={<CreativeTeacherLibraryPage />}
       />
     </Routes>
   );

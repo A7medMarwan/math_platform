@@ -1,0 +1,68 @@
+.almoallem-alsagheer-section {
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+}
+
+.almoallem-alsagheer-section h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: var(--primary-dark);
+  font-size: 2.2em;
+}
+
+.almoallem-alsagheer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.almoallem-alsagheer-section li {
+  background-color: var(--secondary);
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  color: var(--text);
+  border-left: 5px solid var(--primary);
+  transition: all 0.3s ease-in-out;
+}
+
+.almoallem-alsagheer-section li:hover {
+  transform: translateX(5px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.almoallem-alsagheer-section p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.almoallem-alsagheer-header {
+  color: var(--text);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.almoallem-alsagheer-header h1 {
+  color: var(--primary) !important;
+  margin-bottom: 15px;
+  font-size: 3.5em;
+}
+
+.almoallem-alsagheer-button-group {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.almoallem-alsagheer-button-group .btn {
+  padding: 12px 25px;
+  font-size: 1.1em;
+  border-radius: 25px;
+  min-width: 180px;
+}
