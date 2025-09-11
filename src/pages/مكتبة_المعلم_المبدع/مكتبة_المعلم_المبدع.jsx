@@ -320,7 +320,7 @@ export default function MaktabatAlmoallemAlmobde() {
         <h1>مكتبة المعلم المبدع</h1>
         <button
           onClick={() => setShowSubjectSelection(true)}
-          className="btn btn-primary mb-4"
+          className="btn btn-primary my-4"
         >
           رفع درس أو فيديو
         </button>

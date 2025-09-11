@@ -61,6 +61,7 @@ const Carousel = ({ items }) => {
           slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 1,
+          dots: false, // Hide dots on small screens
         },
       },
     ],
